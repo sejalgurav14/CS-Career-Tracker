@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CS Career Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">CS Career Tracker</div>
+
+       <nav>
+    <a href="#">Dashboard</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#practice">Practice</a>
+    <a href="#progress">Progress</a>
+    <a href="#profile">Profile</a>
+
+    <button type="button" onclick="showLoginAndScroll()" class="login-btn">
+        Login
+    </button>
+
+    <button type="button" onclick="logoutUser()" class="logout-btn">
+        Logout
+    </button>
+</nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <p class="small-title">YOUR JOURNEY</p>
+
+            <h1>Become<br>Industry Ready.</h1>
+
+            <p class="description">
+                Track your skills, learning progress and
+                placement preparation in one place.
+            </p>
+
+            <button onclick="startJourney()">
+                Start Your Journey →
+            </button>
+        </section>
+
+
+        <section class="progress-section" id="progress">
+
+            <div class="progress-heading">
+                <div>
+                    <p class="small-title">OVERALL PROGRESS</p>
+                    <h2>Career Readiness</h2>
+                </div>
+
+                <div class="percentage">0%</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="quiz-performance">
+
+    <div class="performance-header">
+        <div>
+            <p class="small-title">QUIZ PERFORMANCE</p>
+            <h3>Your Practice Results</h3>
+        </div>
+    </div>
+
+    <div class="performance-grid">
+
+        <div class="performance-card">
+            <span>DSA</span>
+            <strong id="dsaScore">Not attempted</strong>
+        </div>
+
+        <div class="performance-card">
+            <span>DBMS</span>
+            <strong id="dbmsScore">Not attempted</strong>
+        </div>
+
+        <div class="performance-card">
+            <span>Aptitude</span>
+            <strong id="aptitudeScore">Not attempted</strong>
+        </div>
+
+        <div class="performance-card">
+            <span>Operating Systems</span>
+            <strong id="osScore">Not attempted</strong>
+        </div>
+
+    </div>
+    <!-- PROGRESS SUMMARY -->
+
+<div class="progress-summary">
+
+    <div class="summary-header">
+        <p class="small-title">CAREER SUMMARY</p>
+        <h3>Your Current Progress</h3>
+    </div>
+
+    <div class="summary-grid">
+
+        <div class="summary-card">
+            <span>ROADMAP PROGRESS</span>
+            <strong id="summaryProgress">0%</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>TOPICS COMPLETED</span>
+            <strong id="summaryTopics">0</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>QUIZ ATTEMPTS</span>
+            <strong id="summaryAttempts">0</strong>
+        </div>
+
+        <div class="summary-card">
+            <span>AVERAGE QUIZ SCORE</span>
+            <strong id="summaryAverage">0%</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+        </section>
+
+        <!-- DASHBOARD STATS -->
+
+<section class="dashboard-stats" id="dashboard">
+
+   <div class="stats-header">
+    <p class="small-title">DASHBOARD</p>
+    <h2 id="dashboardGreeting">Your Career Snapshot</h2>
+    <p id="dashboardUserName">
+        Welcome to your career dashboard.
+    </p>
+</div>
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <span>TOPICS COMPLETED</span>
+            <strong id="topicsCompleted">0</strong>
+        </div>
+
+        <div class="stat-card">
+    <span>CAREER READINESS</span>
+    <strong id="careerReadiness">0%</strong>
+</div>
+
+        <div class="stat-card">
+            <span>QUIZ ATTEMPTS</span>
+            <strong id="quizAttempts">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>AVERAGE SCORE</span>
+            <strong id="averageScore">0%</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>SKILL AREAS</span>
+            <strong>8</strong>
+        </div>
+
+    </div>
+    <!-- CONTINUE LEARNING -->
+
+<div class="continue-learning">
+
+    <div>
+        <p class="small-title">CONTINUE LEARNING</p>
+
+        <h3 id="continuePhase">
+            Foundation
+        </h3>
+
+        <p id="continueTopic">
+            Programming Fundamentals
+        </p>
+    </div>
+
+    <button type="button" onclick="continueLearning()">
+        Continue →
+    </button>
+
+</div>
+
+</section>
+
+
+        <section class="roadmap" id="roadmap">
+
+    <div class="roadmap-header">
+        <div>
+            <p class="small-title">YOUR ROADMAP</p>
+            <h2>Career Preparation</h2>
+        </div>
+
+        <p class="roadmap-info">
+            Follow each phase and build your skills step by step.
+        </p>
+    </div>
+
+
+    <!-- PHASE 1 -->
+
+    <div class="phase">
+
+        <div class="phase-number">01</div>
+
+        <div class="phase-content">
+
+            <div class="phase-title">
+                <div>
+                    <p class="phase-label">PHASE 01</p>
+                    <h3>Foundation</h3>
+                </div>
+
+                <span>0%</span>
+            </div>
+
+            <div class="phase-bar">
+                <div class="phase-fill"></div>
+            </div>
+
+            <div class="topics">
+
+                <div class="topic">
+                    <div>
+                        <h4>Programming Fundamentals</h4>
+                        <p>C • C++ • Python</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+                <div class="topic">
+                    <div>
+                        <h4>Computer Fundamentals</h4>
+                        <p>Basics • Logic • Problem Solving</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PHASE 2 -->
+
+    <div class="phase">
+
+        <div class="phase-number">02</div>
+
+        <div class="phase-content">
+
+            <div class="phase-title">
+                <div>
+                    <p class="phase-label">PHASE 02</p>
+                    <h3>Problem Solving</h3>
+                </div>
+
+                <span>0%</span>
+            </div>
+
+            <div class="phase-bar">
+                <div class="phase-fill"></div>
+            </div>
+
+            <div class="topics">
+
+                <div class="topic">
+                    <div>
+                        <h4>Data Structures & Algorithms</h4>
+                        <p>Arrays • Linked List • Stack • Queue</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+                <div class="topic">
+                    <div>
+                        <h4>Advanced Algorithms</h4>
+                        <p>Trees • Graphs • Sorting • Searching</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PHASE 3 -->
+
+    <div class="phase">
+
+        <div class="phase-number">03</div>
+
+        <div class="phase-content">
+
+            <div class="phase-title">
+                <div>
+                    <p class="phase-label">PHASE 03</p>
+                    <h3>Core CS</h3>
+                </div>
+
+                <span>0%</span>
+            </div>
+
+            <div class="phase-bar">
+                <div class="phase-fill"></div>
+            </div>
+
+            <div class="topics">
+
+                <div class="topic">
+                    <div>
+                        <h4>DBMS</h4>
+                        <p>SQL • Normalization • Transactions</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+                <div class="topic">
+                    <div>
+                        <h4>Operating Systems</h4>
+                        <p>Processes • Memory • Scheduling</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<!-- PHASE 4 -->
+    <div class="phase">
+        <div class="phase-number">04</div>
+
+        <div class="phase-content">
+
+            <div class="phase-title">
+                <div>
+                    <p class="phase-label">PHASE 04</p>
+                    <h3>Interview & Placement</h3>
+                </div>
+
+                <span>0%</span>
+            </div>
+
+            <div class="phase-bar">
+                <div class="phase-fill"></div>
+            </div>
+
+            <div class="topics">
+
+                <div class="topic">
+                    <div>
+                        <h4>Aptitude & Reasoning</h4>
+                        <p>Quantitative • Logical • Verbal</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+
+                <div class="topic">
+                    <div>
+                        <h4>Technical Interview</h4>
+                        <p>Programming • CS Fundamentals • Projects</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+
+                <div class="topic">
+                    <div>
+                        <h4>Resume & HR Interview</h4>
+                        <p>Resume • Communication • HR Questions</p>
+                    </div>
+
+                    <button onclick="completeTopic(this)">
+                        Start
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- SKILL AREAS -->
+
+<section class="skill-section">
+
+    <div class="skill-header">
+        <div>
+            <p class="small-title">SKILL AREAS</p>
+            <h2>Build Your Career Skills</h2>
+        </div>
+
+        <p class="skill-info">
+            Develop the skills required for internships,
+            placements and software careers.
+        </p>
+    </div>
+
+
+    <div class="skill-grid">
+
+        <div class="skill-card">
+            <span>01</span>
+            <h3>Programming</h3>
+            <p>C • C++ • Python • Java</p>
+        </div>
+
+        <div class="skill-card">
+            <span>02</span>
+            <h3>DSA</h3>
+            <p>Data Structures • Algorithms</p>
+        </div>
+
+        <div class="skill-card">
+            <span>03</span>
+            <h3>Core CS</h3>
+            <p>DBMS • OS • Networks</p>
+        </div>
+
+        <div class="skill-card">
+            <span>04</span>
+            <h3>Aptitude</h3>
+            <p>Quantitative • Logical • Verbal</p>
+        </div>
+
+        <div class="skill-card">
+            <span>05</span>
+            <h3>Web Development</h3>
+            <p>HTML • CSS • JavaScript</p>
+        </div>
+
+        <div class="skill-card">
+            <span>06</span>
+            <h3>AI & Machine Learning</h3>
+            <p>Python • ML • AI Basics</p>
+        </div>
+
+        <div class="skill-card">
+            <span>07</span>
+            <h3>Projects</h3>
+            <p>Build • Practice • Portfolio</p>
+        </div>
+
+        <div class="skill-card">
+            <span>08</span>
+            <h3>Interview</h3>
+            <p>Technical • HR • Resume</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- PRACTICE SECTION -->
+
+<section class="practice-section" id="practice">
+
+    <div class="practice-header">
+        <div>
+            <p class="small-title">PRACTICE</p>
+            <h2>Test Your Knowledge</h2>
+        </div>
+
+        <p class="practice-info">
+            Practice important questions and prepare
+            yourself for technical interviews.
+        </p>
+    </div>
+
+
+    <div class="practice-grid">
+
+        <div class="practice-card">
+    <span>01</span>
+    <h3>Aptitude</h3>
+    <p>Quantitative & Logical Reasoning</p>
+
+    <strong id="practiceAptitudeScore">
+        Latest Score: No attempt
+    </strong>
+    <strong id="practiceAptitudeBest">
+    Best Score: No attempt
+</strong>
+
+    <button type="button" onclick="startPractice('Aptitude')">
+        Practice →
+    </button>
+</div>
+
+
+        <div class="practice-card">
+    <span>02</span>
+    <h3>DSA</h3>
+    <p>Algorithms & Data Structures</p>
+
+    <strong id="practiceDSAScore">
+        Latest Score: No attempt
+    </strong>
+    <strong id="practiceDSABest">
+    Best Score: No attempt
+</strong>
+
+    <button type="button" onclick="startPractice('DSA')">
+        Practice →
+    </button>
+</div>
+
+
+       <div class="practice-card">
+    <span>03</span>
+    <h3>DBMS</h3>
+    <p>SQL & Database Concepts</p>
+
+    <strong id="practiceDBMSScore">
+        Latest Score: No attempt
+    </strong>
+    <strong id="practiceDBMSBest">
+    Best Score: No attempt
+</strong>
+
+    <button type="button" onclick="startPractice('DBMS')">
+        Practice →
+    </button>
+</div>
+
+
+        <div class="practice-card">
+    <span>04</span>
+    <h3>Operating Systems</h3>
+    <p>Processes & Memory Management</p>
+
+    <strong id="practiceOSScore">
+        Latest Score: No attempt
+    </strong>
+    <strong id="practiceOSBest">
+    Best Score: No attempt
+</strong>
+
+    <button type="button" onclick="startPractice('Operating Systems')">
+        Practice →
+    </button>
+</div>
+
+    </div>
+
+</section>
+<!-- QUIZ SECTION -->
+
+<section class="quiz-section" id="quiz">
+
+    <div class="quiz-header">
+        <p class="small-title">QUIZ</p>
+        <h2>Practice Questions</h2>
+    </div>
+
+    <div class="quiz-box">
+
+        <div class="quiz-subject">
+            <span>SUBJECT</span>
+            <h3 id="quizSubject">Select a subject</h3>
+        </div>
+
+        <div class="question-area">
+
+            <p id="questionNumber">Question 1</p>
+
+            <h3 id="questionText">
+                Select a subject above to begin the quiz.
+            </h3>
+
+            <div id="options" class="options"></div>
+
+        </div>
+
+        <button id="nextButton" onclick="nextQuestion()">
+            Next Question →
+        </button>
+
+        <div id="quizResult"></div>
+
+    </div>
+
+</section>
+
+<!-- ===============================
+     STUDENT PROFILE
+================================ -->
+
+
+        <section class="profile-section" id="profile">
+
+    <div class="profile-header">
+        <div>
+            <p class="small-title">MY PROFILE</p>
+            <h2>Student Profile</h2>
+        </div>
+
+        <p class="profile-info">
+            Manage your career information and goals.
+        </p>
+    </div>
+
+
+    <div class="profile-card">
+
+        <div class="profile-avatar" id="profileAvatar">
+            S
+        </div>
+
+        <div class="profile-details">
+
+            <div class="profile-item">
+                <span>NAME</span>
+                <strong id="profileName">Student</strong>
+            </div>
+
+            <div class="profile-item">
+                <span>EMAIL</span>
+                <strong id="profileEmail">Not available</strong>
+            </div>
+
+            <div class="profile-item">
+                <span>COURSE</span>
+                <strong id="profileCourse">
+                    Computer Science Engineering
+                </strong>
+            </div>
+
+            <div class="profile-item">
+                <span>YEAR</span>
+                <strong id="profileYear">3rd Year</strong>
+            </div>
+
+            <div class="profile-item">
+                <span>CAREER GOAL</span>
+                <strong id="profileGoal">
+                    Software Developer
+                </strong>
+            </div>
+
+        </div>
+
+        <button
+            class="edit-profile-btn"
+            type="button"
+            onclick="editProfile()">
+            Edit Profile →
+        </button>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+    <!-- AUTH SECTION -->
+
+<section class="auth-section" id="auth">
+
+    <div class="auth-container">
+
+        <div class="auth-header">
+            <h2>Welcome to CS Career Tracker</h2>
+            <p>Login or create an account to save your career progress.</p>
+        </div>
+
+        <!-- LOGIN FORM -->
+
+        <div class="auth-form" id="loginForm">
+
+            <h3>Login</h3>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email address"
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+            >
+
+            <button type="button" onclick="loginUser()">
+                Login
+            </button>
+
+            <p>
+                Don't have an account?
+                <span onclick="showRegister()">Create one</span>
+            </p>
+
+        </div>
+
+
+        <!-- REGISTER FORM -->
+
+        <div class="auth-form hidden" id="registerForm">
+
+            <h3>Create Account</h3>
+
+            <input
+                type="text"
+                id="registerName"
+                placeholder="Full name"
+            >
+
+            <input
+                type="email"
+                id="registerEmail"
+                placeholder="Email address"
+            >
+
+            <input
+                type="password"
+                id="registerPassword"
+                placeholder="Password"
+            >
+
+            <input
+                type="text"
+                id="registerCourse"
+                placeholder="Course"
+                value="Computer Science Engineering"
+            >
+
+            <input
+                type="text"
+                id="registerYear"
+                placeholder="Year"
+                value="3rd Year"
+            >
+
+            <input
+                type="text"
+                id="registerGoal"
+                placeholder="Career goal"
+                value="Software Developer"
+            >
+
+            <button type="button" onclick="registerUser()">
+                Create Account
+            </button>
+
+            <p>
+                Already have an account?
+                <span onclick="showLogin()">Login</span>
+            </p>
+
+        </div>
+
+        <p id="authMessage"></p>
+
+    </div>
+
+</section>
+</body>
+</html>

@@ -1143,3 +1143,143 @@ main {
 .hidden {
     display: none;
 }
+
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 8px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav a {
+    font-size: 11px;
+    white-space: nowrap;
+    padding: 5px 3px;
+}
+
+.login-btn,
+.logout-btn {
+    padding: 6px 8px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+    /* Hero */
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.05;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    /* Sections */
+    section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /* Dashboard cards */
+    .dashboard-grid,
+    .stats-grid,
+    .skill-grid,
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Roadmap */
+    .phase {
+        padding: 25px 20px;
+    }
+
+    .topic {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .topic button {
+        width: 100%;
+    }
+
+    /* Quiz */
+    .quiz-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    /* Profile */
+    .profile-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Authentication */
+    .auth-container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 50px !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        gap: 6px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    nav a {
+        display: inline-block !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 6px 4px !important;
+        font-size: 11px !important;
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+    }
+
+    nav button {
+        display: inline-block !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 6px 8px !important;
+        font-size: 11px !important;
+        box-sizing: border-box !important;
+    }
+
+}

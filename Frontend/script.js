@@ -91,7 +91,7 @@ async function completeTopic(button) {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/progress",
+            "https://cs-career-tracker-backend.onrender.com/api/progress",
             {
                 method: "POST",
 
@@ -681,7 +681,7 @@ document.getElementById("quizResult").textContent =
 
     if (token) {
 
-        fetch("http://localhost:5000/api/quiz", {
+        fetch("https://cs-career-tracker-backend.onrender.com/api/quiz", {
             method: "POST",
 
             headers: {
@@ -893,7 +893,7 @@ async function editProfile() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/profile",
+            "https://cs-career-tracker-backend.onrender.com/api/profile",
             {
                 method: "PUT",
 
@@ -1012,7 +1012,7 @@ async function registerUser() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/register",
+            "https://cs-career-tracker-backend.onrender.com/api/auth/register",
             {
                 method: "POST",
 
@@ -1077,7 +1077,7 @@ async function loginUser() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/login",
+            "https://cs-career-tracker-backend.onrender.com/api/auth/login",
             {
                 method: "POST",
 
@@ -1227,7 +1227,7 @@ async function loadRoadmapProgress() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/progress",
+            "https://cs-career-tracker-backend.onrender.com/api/progress",
             {
                 method: "GET",
 
@@ -1309,7 +1309,7 @@ async function loadQuizResults() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/quiz",
+            "https://cs-career-tracker-backend.onrender.com/api/quiz",
             {
                 method: "GET",
 
@@ -1595,7 +1595,7 @@ async function loadProfileFromMongoDB() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/profile",
+            "https://cs-career-tracker-backend.onrender.com/api/profile",
             {
                 method: "GET",
 
